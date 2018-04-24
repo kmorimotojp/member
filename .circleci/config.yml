@@ -36,6 +36,8 @@ jobs:
           - v1-dependencies-
 
       - run: composer install -n --prefer-dist
+      
+      - run: composer require --dev phpunit/phpunit:"6.0"
 
       - save_cache:
           paths:
