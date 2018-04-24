@@ -19,7 +19,11 @@ jobs:
     steps:
     
       - run:
-         name: Install PHP zip
+         name: Install PHP libcu-dev
+         command: sudo apt-get install libicu-dev
+         
+      - run:
+         name: Install PHP intl
          command: sudo docker-php-ext-install intl
          
       - checkout
