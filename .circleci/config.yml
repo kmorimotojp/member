@@ -15,7 +15,7 @@ jobs:
       # - image: circleci/mysql:9.4
       - image: circleci/php:7.2-apache
       - image: circleci/mysql:5.7.22-ram
-      #  command: mysqld --explicit_defaults_for_timestamp=1
+        command: mysqld --explicit_defaults_for_timestamp=1
       
 
     working_directory: ~/repo
