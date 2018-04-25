@@ -49,4 +49,4 @@ jobs:
           key: v1-dependencies-{{ checksum "composer.json" }}
         
       # run tests!
-      - run: vendor/bin/phpunit --coverage-html=$CIRCLE_ARTIFACTS
+      - run: vendor/bin/phpunit --coverage-html $CIRCLE_ARTIFACTS
