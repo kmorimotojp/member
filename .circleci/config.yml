@@ -24,6 +24,8 @@ jobs:
     
       - run: sudo mkdir /result
       
+      - run: sudo chmod 777 /result
+      
       - run:
          name: Install PHP libcu-dev
          command: sudo apt-get install libicu-dev
