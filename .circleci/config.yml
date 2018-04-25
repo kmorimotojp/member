@@ -54,7 +54,5 @@ jobs:
       - run: vendor/bin/phpunit --coverage-html ~/reports
       
       - store_artifacts:
-        paths: ~/reports/
-      - store_test_results:
-        paths: ~/reports/
+          path: /code/test-results
         
