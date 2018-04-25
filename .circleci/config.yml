@@ -48,11 +48,12 @@ jobs:
             - ./vendor
           key: v1-dependencies-{{ checksum "composer.json" }}
       
-      - run: mkdir -p /reports
-      
       # run tests!
-      - run: vendor/bin/phpunit --coverage-html /code/test-results
+      - run: vendor/bin/phpunit --coverage-html /result/
       
+      - store_test_results:
+          path: /result/
+          
       - store_artifacts:
-          path: /code/test-results
+          path: /result/
         
