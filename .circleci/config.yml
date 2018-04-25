@@ -51,7 +51,7 @@ jobs:
       - run: mkdir -p /reports
       
       # run tests!
-      - run: vendor/bin/phpunit --coverage-html ~/reports
+      - run: vendor/bin/phpunit --coverage-html /code/test-results
       
       - store_artifacts:
           path: /code/test-results
