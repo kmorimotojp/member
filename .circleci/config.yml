@@ -47,6 +47,13 @@ jobs:
           paths:
             - ./vendor
           key: v1-dependencies-{{ checksum "composer.json" }}
-        
+      
+      - run: mkdir -p /reports
+      
       # run tests!
-      - run: vendor/bin/phpunit --coverage-html $CIRCLE_ARTIFACTS
+      - run: vendor/bin/phpunit --coverage-html reports
+      
+      - store_test_results:
+        path: ./reports
+      - store_artifacts:
+        path: ./reports
