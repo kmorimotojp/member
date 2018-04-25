@@ -35,8 +35,8 @@ jobs:
          command: sudo docker-php-ext-install intl
          
       - run:
-         name: Install PHP mysql
-         command: sudo docker-php-ext-install mysql
+         name: Install PHP pdo_mysql
+         command: sudo docker-php-ext-install pdo_mysql
          
       - checkout
 
