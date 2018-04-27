@@ -3,7 +3,7 @@
     <p><?= $message ?></p>
     <?=$this->Form->create(null,[
         'type' => 'post',
-        'url' => ['controller' => 'Loginc', 'action' => 'index']]
+        'url' => ['controller' => 'Login', 'action' => 'index']]
     ) ?>
     <?=$this->Form->date('date',[
         'year'=>['style'=>'width:100px;'],
